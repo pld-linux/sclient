@@ -6,8 +6,9 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://sclient.linux.se/%{name}-%{version}.tar.gz
-BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -23,9 +24,11 @@ Prosty klient MUDa pod Xy.
 
 %build
 rm -f missing
+aclocal
+autoconf
 automake -a -c
 CFLAGS="%{rpmcflags}"
-%configure2_13 \
+%configure \
 	%{?debug:--enable-more-warnings} \
 	%{!?debug:--disable-more-warnings}
 %{__make}
