@@ -37,12 +37,11 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install src/sclient $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf README AUTHORS BUGS NEWS TODO ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS BUGS NEWS TODO ChangeLog
 %attr(755,root,root) %{_bindir}/*
