@@ -28,7 +28,7 @@ aclocal
 autoconf
 automake -a -c -f
 %configure \
-	--%{?debug:en}%{!?debug:dis}able-more-warnings}
+	--%{?debug:en}%{!?debug:disable-more-warnings}
 %{__make}
 
 %install
