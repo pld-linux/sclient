@@ -6,8 +6,8 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://sclient.linux.se/%{name}-%{version}.tar.gz
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,7 +39,7 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install src/sclient $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf README AUTHORS BUGS COPYING INSTALL NEWS TODO ChangeLog
+gzip -9nf README AUTHORS BUGS NEWS TODO ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
