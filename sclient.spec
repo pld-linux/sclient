@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://sclient.linux.se/%{name}-%{version}.tar.gz
+# Source0-md5:	e399bad04fb5837c5be1d9874fbfac32
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.0
