@@ -26,7 +26,7 @@ Prosty klient MUDa pod Xy.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 CFLAGS="%{rpmcflags}"
 %configure \
 	%{?debug:--enable-more-warnings} \
