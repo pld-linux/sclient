@@ -25,8 +25,8 @@ Prosty klient MUDa pod Xy.
 %build
 rm -f missing
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--%{?debug:en}%{!?debug:dis}able-more-warnings
 %{__make}
