@@ -27,7 +27,7 @@ automake -a -c
 CFLAGS="%{rpmcflags}"
 %configure2_13 \
 	%{?debug:--enable-more-warnings} \
-	%{!?debug:--disable-more-warnings} 
+	%{!?debug:--disable-more-warnings}
 %{__make}
 
 %install
