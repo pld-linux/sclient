@@ -27,10 +27,8 @@ rm -f missing
 aclocal
 autoconf
 automake -a -c -f
-CFLAGS="%{rpmcflags}"
 %configure \
-	%{?debug:--enable-more-warnings} \
-	%{!?debug:--disable-more-warnings}
+	--%{?debug:en}%{!?debug:dis}able-more-warnings}
 %{__make}
 
 %install
