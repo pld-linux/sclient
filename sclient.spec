@@ -5,8 +5,6 @@ Version:	0.7.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://sclient.linux.se/%{name}-%{version}.tar.gz
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	automake
