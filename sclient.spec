@@ -24,7 +24,7 @@ Prosty klient MUDa pod Xy.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
