@@ -1,41 +1,41 @@
-Summary:	simple X MUD client
-Summary(pl):	prosty klient MUDa pod Xy
+Summary:	Simple X MUD client
+Summary(pl):	Prosty klient MUDa pod Xy
 Name:		sclient
 Version:	0.7.2
 Release:	1
 License:	GPL
-Group:		X11/Games
-Group(pl):	X11/Gry
+Group:		X11/Applications/Games
+Group(de):	X11/Applikationen/Spiele
+Group(pl):	X11/Aplikacje/Gry
 Source0:	http://sclient.linux.se/%{name}-%{version}.tar.gz
 BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
 %description
-simple X MUD client
+Simple X MUD client.
 
 %description -l pl
-prosty klient MUDa pod Xy
+Prosty klient MUDa pod Xy.
 
 %prep
 %setup -q
 
 %build
-
-rm missing
-CFLAGS="%{rpmcflags}"
-
+rm -f missing
 automake -a -c
+CFLAGS="%{rpmcflags}"
 %configure2_13 \
 	%{?debug:--enable-more-warnings} \
 	%{!?debug:--disable-more-warnings} 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
+
 install src/sclient $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf README AUTHORS BUGS COPYING INSTALL NEWS TODO ChangeLog
