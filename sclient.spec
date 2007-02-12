@@ -1,5 +1,5 @@
 Summary:	Simple X MUD client
-Summary(pl):	Prosty klient MUDa pod Xy
+Summary(pl.UTF-8):   Prosty klient MUDa pod Xy
 Name:		sclient
 Version:	0.7.2
 Release:	1
@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Simple X MUD client.
 
-%description -l pl
+%description -l pl.UTF-8
 Prosty klient MUDa pod Xy.
 
 %prep
