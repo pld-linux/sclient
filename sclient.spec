@@ -1,5 +1,5 @@
 Summary:	Simple X MUD client
-Summary(pl.UTF-8):   Prosty klient MUDa pod Xy
+Summary(pl.UTF-8):	Prosty klient MUDa pod Xy
 Name:		sclient
 Version:	0.7.2
 Release:	1
